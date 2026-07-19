@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b7vrk3aht48hm"]
+
+[ext_resource type="Script" uid="uid://cx4pwsmwhscgr" path="res://button.gd" id="1_62e2m"]
+[ext_resource type="Texture2D" uid="uid://2k2xtevuyc7q" path="res://Sniper.png" id="2_qtu10"]
+
+[node name="Control" type="Control" unique_id=2074485048]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1969674244]
+layout_mode = 0
+offset_right = 1189.0
+offset_bottom = 683.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=1347030644]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 354.0
+offset_right = 755.0
+offset_bottom = 606.0
+script = ExtResource("1_62e2m")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1187001947]
+
+[node name="Sniper" type="Sprite2D" parent="Node2D" unique_id=253462621]
+position = Vector2(222, 188)
+scale = Vector2(0.28628674, 0.28628674)
+texture = ExtResource("2_qtu10")
+
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
