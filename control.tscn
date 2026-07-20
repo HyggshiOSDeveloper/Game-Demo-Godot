@@ -27,6 +27,7 @@ script = ExtResource("1_62e2m")
 [node name="Node2D" type="Node2D" parent="." unique_id=1187001947]
 
 [node name="Sniper" type="Sprite2D" parent="Node2D" unique_id=253462621]
+visible = false
 position = Vector2(222, 188)
 scale = Vector2(0.28628674, 0.28628674)
 texture = ExtResource("2_qtu10")
