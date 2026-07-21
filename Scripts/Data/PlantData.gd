@@ -21,6 +21,11 @@ class_name PlantData
 @export var attack_interval: float = 1.5  ## Seconds between shots.
 @export var attack_range: float = 900.0   ## Pixels; effectively "rest of the lane".
 @export var projectile_speed: float = 400.0
+@export var attack_sound: AudioStream     ## Played per shot; falls back to AudioManager's generic "shoot" sfx if empty.
+
+@export_group("Ammo")
+@export var max_ammo: int = 0             ## 0 = unlimited ammo, no reload needed.
+@export var reload_time: float = 5.0      ## Seconds to fully reload once ammo hits 0.
 
 @export_group("Sun Production")
 @export var produces_sun: bool = false

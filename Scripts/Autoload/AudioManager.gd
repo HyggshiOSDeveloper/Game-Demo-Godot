@@ -54,11 +54,18 @@ func play_sfx(key: String) -> void:
 	var path: String = SFX_PATHS.get(key, "")
 	if path == "" or not ResourceLoader.exists(path):
 		return
+	play_stream(load(path))
+
+## Plays an arbitrary AudioStream (e.g. a per-weapon sound assigned on a
+## PlantData resource) through the same round-robin SFX pool as play_sfx().
+func play_stream(stream: AudioStream) -> void:
+	if stream == null:
+		return
 	for p in _sfx_pool:
 		if not p.playing:
-			p.stream = load(path)
+			p.stream = stream
 			p.play()
 			return
 	# All busy: steal the first one.
-	_sfx_pool[0].stream = load(path)
+	_sfx_pool[0].stream = stream
 	_sfx_pool[0].play()

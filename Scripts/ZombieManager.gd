@@ -82,6 +82,16 @@ func damage_area(center_row: int, center_col: int, radius_cells: int, damage: in
 func get_active_count() -> int:
 	return _active_zombies.size()
 
+## Used by Plant.gd to avoid firing (and wasting ammo) when there is no
+## living zombie left to hit: true if any active zombie in `lane` is at or
+## ahead of `min_x` (a pea fired from that x can only ever reach zombies to
+## its right, since it travels rightward).
+func has_zombie_in_lane(lane: int, min_x: float = -INF) -> bool:
+	for z in _active_zombies:
+		if z.lane == lane and z.is_alive() and z.global_position.x >= min_x:
+			return true
+	return false
+
 ## Only meaningful once WaveManager has stopped spawning; UI/WaveManager
 ## use this signal to know when the board is fully clear.
 func _check_wave_cleared() -> void:
