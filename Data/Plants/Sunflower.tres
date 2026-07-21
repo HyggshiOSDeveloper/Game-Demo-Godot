@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://bi70mdxm2lgp6"]
+
+[ext_resource type="Script" uid="uid://ccpc5idoy44t5" path="res://Scripts/Data/PlantData.gd" id="1_eqedl"]
+
+[resource]
+script = ExtResource("1_eqedl")
+plant_name = "Sunflower"
+produces_sun = true

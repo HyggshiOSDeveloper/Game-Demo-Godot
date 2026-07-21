@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://b5wnee7g80xyx"]
+
+[ext_resource type="Script" uid="uid://ccpc5idoy44t5" path="res://Scripts/Data/PlantData.gd" id="1_rlhvq"]
+
+[resource]
+script = ExtResource("1_rlhvq")
+plant_name = "Peashooter"
+cost = 100
+can_attack = true

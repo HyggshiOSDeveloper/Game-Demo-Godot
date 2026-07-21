@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://ram2ktjdxqiu"]
+
+[ext_resource type="Script" uid="uid://craqgamvb3q02" path="res://Scripts/Data/WaveData.gd" id="1_ppiom"]
+[ext_resource type="Script" uid="uid://bni0iy7uiy8rh" path="res://Scripts/Data/ZombieData.gd" id="2_5dity"]
+[ext_resource type="Resource" uid="uid://ckewrvcna4wwy" path="res://Data/Zombies/BasicZombie.tres" id="3_qq55m"]
+[ext_resource type="Resource" uid="uid://wd26xae6s5a7" path="res://Data/Zombies/ConeheadZombie.tres" id="4_ocjih"]
+[ext_resource type="Resource" uid="uid://bb3ob660facx2" path="res://Data/Zombies/BucketheadZombie.tres" id="5_dbhuf"]
+[ext_resource type="Resource" uid="uid://sk5u1hjkr0j6" path="res://Data/Zombies/FastZombie.tres" id="6_0orcr"]
+
+[resource]
+script = ExtResource("1_ppiom")
+zombies = Array[ExtResource("2_5dity")]([ExtResource("3_qq55m"), ExtResource("4_ocjih"), ExtResource("5_dbhuf"), ExtResource("6_0orcr")])
+zombie_count = 18
+spawn_interval = 1.8
+is_flag_wave = true

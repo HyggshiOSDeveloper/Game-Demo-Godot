@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://b8ochoqw5wqt4"]
+
+[ext_resource type="Script" uid="uid://craqgamvb3q02" path="res://Scripts/Data/WaveData.gd" id="1_ted8w"]
+[ext_resource type="Script" uid="uid://bni0iy7uiy8rh" path="res://Scripts/Data/ZombieData.gd" id="2_1xm7e"]
+[ext_resource type="Resource" uid="uid://ckewrvcna4wwy" path="res://Data/Zombies/BasicZombie.tres" id="3_nfssf"]
+[ext_resource type="Resource" uid="uid://wd26xae6s5a7" path="res://Data/Zombies/ConeheadZombie.tres" id="4_ium0k"]
+[ext_resource type="Resource" uid="uid://sk5u1hjkr0j6" path="res://Data/Zombies/FastZombie.tres" id="5_bkufq"]
+
+[resource]
+script = ExtResource("1_ted8w")
+zombies = Array[ExtResource("2_1xm7e")]([ExtResource("3_nfssf"), ExtResource("4_ium0k"), ExtResource("5_bkufq")])
+zombie_count = 10

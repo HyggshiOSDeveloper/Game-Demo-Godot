@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ZombieData" format=3 uid="uid://bb3ob660facx2"]
+
+[ext_resource type="Script" uid="uid://bni0iy7uiy8rh" path="res://Scripts/Data/ZombieData.gd" id="1_hprbj"]
+
+[resource]
+script = ExtResource("1_hprbj")
+zombie_name = "Buckethead Zombie"
+armor_health = 400

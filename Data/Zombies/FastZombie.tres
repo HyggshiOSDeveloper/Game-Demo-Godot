@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ZombieData" format=3 uid="uid://sk5u1hjkr0j6"]
+
+[ext_resource type="Script" uid="uid://bni0iy7uiy8rh" path="res://Scripts/Data/ZombieData.gd" id="1_mmwg0"]
+
+[resource]
+script = ExtResource("1_mmwg0")
+zombie_name = "Fast Zombie"
+max_health = 70
+attack_damage = 15
+attack_interval = 0.8
+speed = 55.0

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://ckivilgd0qeqe"]
+
+[ext_resource type="Script" uid="uid://ccpc5idoy44t5" path="res://Scripts/Data/PlantData.gd" id="1_8ait0"]
+
+[resource]
+script = ExtResource("1_8ait0")
+plant_name = "CherryBomb"
+cost = 150
+cooldown = 30.0
+is_instant = true

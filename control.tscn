@@ -12,6 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=1969674244]
+visible = false
 layout_mode = 0
 offset_right = 1835.0
 offset_bottom = 1241.0
@@ -37,6 +38,21 @@ text = "Hello"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Panel2" type="Panel" parent="." unique_id=1630675803]
+layout_mode = 0
+offset_right = 1835.0
+offset_bottom = 1241.0
+
+[node name="Button" type="Button" parent="Panel2" unique_id=1939973180]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 29.0
+offset_right = 122.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 40
+text = "<"
+script = ExtResource("1_62e2m")
+
 [node name="Node2D" type="Node2D" parent="." unique_id=1187001947]
 
 [node name="Sniper" type="Sprite2D" parent="Node2D" unique_id=253462621]
@@ -45,3 +61,4 @@ scale = Vector2(0.28628674, 0.28628674)
 texture = ExtResource("2_qtu10")
 
 [connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
+[connection signal="pressed" from="Panel2/Button" to="Panel2/Button" method="_on_pressed"]

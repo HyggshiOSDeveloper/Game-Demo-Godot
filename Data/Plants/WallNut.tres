@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://yfpyi180f5qg"]
+
+[ext_resource type="Script" uid="uid://ccpc5idoy44t5" path="res://Scripts/Data/PlantData.gd" id="1_crcro"]
+
+[resource]
+script = ExtResource("1_crcro")
+plant_name = "WallNut"
+cooldown = 20.0
+max_health = 400
