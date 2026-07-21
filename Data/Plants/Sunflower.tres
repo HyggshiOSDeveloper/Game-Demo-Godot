@@ -1,8 +1,11 @@
 [gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://bi70mdxm2lgp6"]
 
 [ext_resource type="Script" uid="uid://ccpc5idoy44t5" path="res://Scripts/Data/PlantData.gd" id="1_eqedl"]
+[ext_resource type="Texture2D" uid="uid://bchue7smbm26g" path="res://Assets/Solar.png" id="1_mxgul"]
 
 [resource]
 script = ExtResource("1_eqedl")
 plant_name = "Sunflower"
+icon = ExtResource("1_mxgul")
+texture = ExtResource("1_mxgul")
 produces_sun = true

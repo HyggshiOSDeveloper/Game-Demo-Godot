@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://yfpyi180f5qg"]
 
+[ext_resource type="Texture2D" uid="uid://ctm3ye1dtt66v" path="res://Assets/Infi_Wall.png" id="1_1sq60"]
 [ext_resource type="Script" uid="uid://ccpc5idoy44t5" path="res://Scripts/Data/PlantData.gd" id="1_crcro"]
 
 [resource]
 script = ExtResource("1_crcro")
 plant_name = "WallNut"
+icon = ExtResource("1_1sq60")
+texture = ExtResource("1_1sq60")
 cooldown = 20.0
 max_health = 400

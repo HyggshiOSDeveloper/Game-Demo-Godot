@@ -1,10 +1,13 @@
 [gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://ckivilgd0qeqe"]
 
+[ext_resource type="Texture2D" uid="uid://f8t4impkt48f" path="res://Assets/Orbital_Strike.png" id="1_7sx6y"]
 [ext_resource type="Script" uid="uid://ccpc5idoy44t5" path="res://Scripts/Data/PlantData.gd" id="1_8ait0"]
 
 [resource]
 script = ExtResource("1_8ait0")
 plant_name = "CherryBomb"
+icon = ExtResource("1_7sx6y")
+texture = ExtResource("1_7sx6y")
 cost = 150
 cooldown = 30.0
 is_instant = true

@@ -1,9 +1,16 @@
 [gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://b5wnee7g80xyx"]
 
+[ext_resource type="AudioStream" uid="uid://xcovyod7bem7" path="res://Assets/Desert_Eagle.mp3" id="1_5tly5"]
+[ext_resource type="Texture2D" uid="uid://bc8g0i24dwtn8" path="res://Assets/Desert_Eagle.png" id="1_cu40h"]
 [ext_resource type="Script" uid="uid://ccpc5idoy44t5" path="res://Scripts/Data/PlantData.gd" id="1_rlhvq"]
 
 [resource]
 script = ExtResource("1_rlhvq")
 plant_name = "Peashooter"
+icon = ExtResource("1_cu40h")
+texture = ExtResource("1_cu40h")
 cost = 100
 can_attack = true
+attack_interval = 0.4
+attack_sound = ExtResource("1_5tly5")
+max_ammo = 10
