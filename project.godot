@@ -11,14 +11,26 @@ config_version=5
 [application]
 
 config/name="UVZ"
-run/main_scene="res://control.tscn"
+run/main_scene="res://Scenes/UI/MainMenu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
+GameManager="*res://Scripts/Autoload/GameManager.gd"
+SaveManager="*res://Scripts/Autoload/SaveManager.gd"
+AudioManager="*res://Scripts/Autoload/AudioManager.gd"
+SunManager="*res://Scripts/Autoload/SunManager.gd"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg")
 
 [physics]
 

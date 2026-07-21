@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cmwosvxye8lud"]
+
+[ext_resource type="Script" uid="uid://cr2y5mlogqdby" path="res://Scripts/Plant.gd" id="1_t27ga"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mb61i"]
+size = Vector2(70, 90)
+
+[node name="Plant" type="Area2D" unique_id=253816135]
+collision_mask = 0
+script = ExtResource("1_t27ga")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1777076292]
+shape = SubResource("RectangleShape2D_mb61i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=601589980]
+
+[node name="Placeholder" type="ColorRect" parent="." unique_id=1893349193]
+offset_left = -35.0
+offset_top = -45.0
+offset_right = 35.0
+offset_bottom = 45.0
+mouse_filter = 2
+color = Color(0.24705882, 0.68235296, 0.2901961, 1)
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1963953271]
+offset_left = -30.0
+offset_top = -55.0
+offset_right = 30.0
+offset_bottom = -28.0
+show_percentage = false
+
+[node name="HitFlashTimer" type="Timer" parent="." unique_id=173745204]
+one_shot = true
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=402548431]
+
+[node name="SunTimer" type="Timer" parent="." unique_id=396925897]
+
+[node name="FuseTimer" type="Timer" parent="." unique_id=194923016]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2019557251]

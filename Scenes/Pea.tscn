@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cacch6na18few"]
+
+[ext_resource type="Script" uid="uid://dpucvsnv1t0t5" path="res://Scripts/Pea.gd" id="1_s8qxx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbotp"]
+
+[node name="Pea" type="Area2D" unique_id=412363406]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_s8qxx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614552566]
+shape = SubResource("CircleShape2D_bbotp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=348654118]
+
+[node name="Placeholder" type="ColorRect" parent="." unique_id=1883397690]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+mouse_filter = 2
+color = Color(0.29803923, 0.6862745, 0.3137255, 1)

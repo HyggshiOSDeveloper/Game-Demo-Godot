@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bh5ljku1gsis8"]
+
+[ext_resource type="Script" uid="uid://dk145hybafd2" path="res://Scripts/UI/PauseMenu.gd" id="1_eod5q"]
+
+[node name="PauseMenu" type="Control" unique_id=1802930762]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eod5q")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1879740590]
+layout_mode = 0
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer" unique_id=313339523]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBox" unique_id=1119446834]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/VBox" unique_id=1082845383]
+custom_minimum_size = Vector2(200, 48)
+layout_mode = 2
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBox" unique_id=1409912512]
+custom_minimum_size = Vector2(200, 48)
+layout_mode = 2
+text = "Quit to Menu"
+
+[node name="Background" type="ColorRect" parent="." unique_id=658756410]
+layout_mode = 0
+mouse_filter = 1
+color = Color(0, 0, 0, 0.7529412)

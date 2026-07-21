@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b7p0bkb64spka"]
+
+[ext_resource type="Script" uid="uid://07lxge801o1a" path="res://Scripts/UI/SeedPacketBar.gd" id="1_xjkig"]
+[ext_resource type="PackedScene" uid="uid://bb1sbrw26t7k" path="res://Scenes/UI/SeedPacket.tscn" id="2_4wa6v"]
+
+[node name="SeedPacketBar" type="HBoxContainer" unique_id=1659137885]
+offset_left = 20.0
+offset_top = 12.0
+offset_right = 20.0
+offset_bottom = 12.0
+theme_override_constants/separation = 6
+script = ExtResource("1_xjkig")
+seed_packet_scene = ExtResource("2_4wa6v")

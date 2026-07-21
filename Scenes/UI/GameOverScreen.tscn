@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cdrns4ejjwwel"]
+
+[ext_resource type="Script" uid="uid://b5hoe7106vdcs" path="res://Scripts/UI/GameOverScreen.gd" id="1_kjtn0"]
+
+[node name="GameOverScreen" type="Control" unique_id=1481703960]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kjtn0")
+
+[node name="Background" type="ColorRect" parent="." unique_id=26253317]
+layout_mode = 0
+mouse_filter = 1
+color = Color(0.23921569, 0.039215688, 0.039215688, 0.8156863)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=836205439]
+layout_mode = 0
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer" unique_id=1867756977]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBox" unique_id=148159191]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "The Zombies Ate Your Brains!"
+horizontal_alignment = 1
+
+[node name="RetryButton" type="Button" parent="CenterContainer/VBox" unique_id=1416092411]
+custom_minimum_size = Vector2(200, 48)
+layout_mode = 2
+text = "Retry"
+
+[node name="MenuButton" type="Button" parent="CenterContainer/VBox" unique_id=1072533580]
+custom_minimum_size = Vector2(200, 48)
+layout_mode = 2
+text = "Main Menu"

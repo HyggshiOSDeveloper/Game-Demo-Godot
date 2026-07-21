@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dwreae2oy8xv5"]
+
+[ext_resource type="Script" uid="uid://vc5qgb68tj00" path="res://Scripts/UI/WaveProgressBar.gd" id="1_pugv6"]
+
+[node name="WaveProgressBar" type="ProgressBar" unique_id=714610013]
+offset_left = 300.0
+offset_top = 20.0
+offset_right = 700.0
+offset_bottom = 47.0
+show_percentage = false
+script = ExtResource("1_pugv6")
+
+[node name="WaveLabel" type="Label" parent="." unique_id=79162401]
+layout_mode = 0
+offset_top = -22.0
+offset_right = 1.0
+offset_bottom = 1.0
+text = "Wave 1 / 1"

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://b4cdm32rj07j8"]
+
+[ext_resource type="Script" uid="uid://eundbb5smwsy" path="res://Scripts/Main.gd" id="1_erwvk"]
+[ext_resource type="PackedScene" uid="uid://cu02j1fnrmxi8" path="res://Scenes/Sun.tscn" id="2_2w5on"]
+[ext_resource type="PackedScene" uid="uid://briss743km16o" path="res://Scenes/LawnMower.tscn" id="3_346fj"]
+[ext_resource type="Script" uid="uid://icripm5prb0t" path="res://Scripts/GridManager.gd" id="4_0sclb"]
+[ext_resource type="Script" uid="uid://cmuk0mikw2bhs" path="res://Scripts/PlantManager.gd" id="5_sxkr1"]
+[ext_resource type="PackedScene" uid="uid://cmwosvxye8lud" path="res://Scenes/Plant.tscn" id="6_fq0cl"]
+[ext_resource type="PackedScene" uid="uid://cacch6na18few" path="res://Scenes/Pea.tscn" id="7_hwpts"]
+[ext_resource type="Script" uid="uid://ccpc5idoy44t5" path="res://Scripts/Data/PlantData.gd" id="8_5jffn"]
+[ext_resource type="Script" uid="uid://bg0npxo3k8qsg" path="res://Scripts/ZombieManager.gd" id="8_jyqft"]
+[ext_resource type="PackedScene" uid="uid://73a3vc1w4bba" path="res://Scenes/Zombie.tscn" id="9_3tgeq"]
+[ext_resource type="Resource" uid="uid://bi70mdxm2lgp6" path="res://Data/Plants/Sunflower.tres" id="9_kpo4j"]
+[ext_resource type="Resource" uid="uid://b5wnee7g80xyx" path="res://Data/Plants/Peashooter.tres" id="10_4n42c"]
+[ext_resource type="Script" uid="uid://ckeb0tpivb00x" path="res://Scripts/WaveManager.gd" id="10_c4ay3"]
+[ext_resource type="PackedScene" uid="uid://b7p0bkb64spka" path="res://Scenes/UI/SeedPacketBar.tscn" id="11_aht7i"]
+[ext_resource type="Resource" uid="uid://yfpyi180f5qg" path="res://Data/Plants/WallNut.tres" id="11_c5snn"]
+[ext_resource type="PackedScene" uid="uid://3mr2ndy7dxfs" path="res://Scenes/UI/SunCounter.tscn" id="12_5jffn"]
+[ext_resource type="Resource" uid="uid://ckivilgd0qeqe" path="res://Data/Plants/CherryBomb.tres" id="12_xvtyr"]
+[ext_resource type="PackedScene" uid="uid://dwreae2oy8xv5" path="res://Scenes/UI/WaveProgressBar.tscn" id="13_kpo4j"]
+[ext_resource type="PackedScene" uid="uid://bh5ljku1gsis8" path="res://Scenes/UI/PauseMenu.tscn" id="14_4n42c"]
+[ext_resource type="PackedScene" uid="uid://b01xrn7tgxjpl" path="res://Scenes/UI/VictoryScreen.tscn" id="15_c5snn"]
+[ext_resource type="Script" uid="uid://craqgamvb3q02" path="res://Scripts/Data/WaveData.gd" id="16_u7mjy"]
+[ext_resource type="PackedScene" uid="uid://cdrns4ejjwwel" path="res://Scenes/UI/GameOverScreen.tscn" id="16_xvtyr"]
+[ext_resource type="Resource" uid="uid://cxrrwx3fyhq5f" path="res://Data/Waves/Wave1.tres" id="17_4yxf6"]
+[ext_resource type="Resource" uid="uid://36a41pcknjwt" path="res://Data/Waves/Wave2.tres" id="18_qta6b"]
+[ext_resource type="Resource" uid="uid://b8ochoqw5wqt4" path="res://Data/Waves/Wave3.tres" id="19_x3rx7"]
+[ext_resource type="Resource" uid="uid://phsm6norxbwt" path="res://Data/Waves/Wave4.tres" id="20_6heos"]
+[ext_resource type="Resource" uid="uid://ram2ktjdxqiu" path="res://Data/Waves/Wave5.tres" id="21_vvnwx"]
+
+[node name="Main" type="Node2D" unique_id=1931606590]
+script = ExtResource("1_erwvk")
+sun_scene = ExtResource("2_2w5on")
+lawn_mower_scene = ExtResource("3_346fj")
+
+[node name="Background" type="ColorRect" parent="." unique_id=887894346]
+offset_right = 1280.0
+offset_bottom = 620.0
+mouse_filter = 2
+color = Color(0.3647059, 0.60784316, 0.2784314, 1)
+
+[node name="World" type="Node2D" parent="." unique_id=1375525299]
+
+[node name="PlantsLayer" type="Node2D" parent="World" unique_id=1750057592]
+
+[node name="ZombiesLayer" type="Node2D" parent="World" unique_id=1194262901]
+
+[node name="PeaLayer" type="Node2D" parent="World" unique_id=1070705387]
+
+[node name="SunLayer" type="Node2D" parent="World" unique_id=65969396]
+
+[node name="MowersLayer" type="Node2D" parent="World" unique_id=72087211]
+
+[node name="GridManager" type="Node2D" parent="." unique_id=1792995215]
+script = ExtResource("4_0sclb")
+
+[node name="PlantManager" type="Node" parent="." unique_id=1639565149]
+script = ExtResource("5_sxkr1")
+plant_scene = ExtResource("6_fq0cl")
+pea_scene = ExtResource("7_hwpts")
+plant_data_list = Array[ExtResource("8_5jffn")]([ExtResource("9_kpo4j"), ExtResource("10_4n42c"), ExtResource("11_c5snn"), ExtResource("12_xvtyr")])
+
+[node name="ZombieManager" type="Node" parent="." unique_id=1173295281]
+script = ExtResource("8_jyqft")
+zombie_scene = ExtResource("9_3tgeq")
+
+[node name="WaveManager" type="Node" parent="." unique_id=1997170789]
+script = ExtResource("10_c4ay3")
+waves = Array[ExtResource("16_u7mjy")]([ExtResource("17_4yxf6"), ExtResource("18_qta6b"), ExtResource("19_x3rx7"), ExtResource("20_6heos"), ExtResource("21_vvnwx")])
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1775156455]
+
+[node name="SeedPacketBar" parent="UILayer" unique_id=1659137885 instance=ExtResource("11_aht7i")]
+
+[node name="SunCounter" parent="UILayer" unique_id=463096100 instance=ExtResource("12_5jffn")]
+
+[node name="WaveProgressBar" parent="UILayer" unique_id=714610013 instance=ExtResource("13_kpo4j")]
+offset_left = 400.0
+offset_right = 800.0
+
+[node name="PauseMenu" parent="UILayer" unique_id=1802930762 instance=ExtResource("14_4n42c")]
+
+[node name="VictoryScreen" parent="UILayer" unique_id=791374455 instance=ExtResource("15_c5snn")]
+
+[node name="GameOverScreen" parent="UILayer" unique_id=1481703960 instance=ExtResource("16_xvtyr")]
+
+[node name="PauseButton" type="Button" parent="UILayer" unique_id=1131697448]
+offset_left = 1200.0
+offset_top = 12.0
+offset_right = 1248.0
+offset_bottom = 52.0
+text = "II"
